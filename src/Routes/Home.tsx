@@ -10,35 +10,9 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
-/* 
-const Img = styled.img`
-  height: 100vh;
-  &: first-child {
-    position: absolute;
-    clip: rect(0, 570px, 100vh, 0);
-  }
-  &: nth-child(2) {
-    position: absolute;
-    clip: rect(0, 960px, 100vh, 570px);
-  }
-  &: nth-child(3) {
-    position: absolute;
-    clip: rect(0, 1350px, 100vh, 960px);
-  }
-  &: last-child {
-    position: absolute;
-    clip: rect(0, 1920px, 100vh, 1350px);
-  }
-`;
-*/
-
-const Img = styled.img`
-  width: 100vw;
-  overflow: hidden;
-`;
-
 const Container = styled.div`
   &: first-child {
+    position: relative;
     background-image: url("../../Images/edit1.jpg");
     background-size: 100vw 100vh;
     width: 30vw;
@@ -46,6 +20,7 @@ const Container = styled.div`
     background-color: white;
   }
   &: nth-child(2) {
+    position: relative;
     background-image: url("../../Images/edit2.jpg");
     background-size: 100vw 100vh;
     background-position: 35%;
@@ -54,6 +29,7 @@ const Container = styled.div`
     background-color: green;
   }
   &: nth-child(3) {
+    position: relative;
     background-image: url("../../Images/edit3.jpg");
     background-size: 100vw 100vh;
     background-position: 65%;
@@ -62,6 +38,7 @@ const Container = styled.div`
     background-color: yellow;
   }
   &: last-child {
+    position: relative;
     background-image: url("../../Images/edit4.jpg");
     background-size: 100vw 100vh;
     background-position: 100%;
@@ -71,13 +48,113 @@ const Container = styled.div`
   }
 `;
 
+const Img1 = styled.img`
+  &: nth-child(1) {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40vh;
+    opacity: 0.7;
+  }
+  &: nth-child(2) {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    height: 5vh;
+  }
+  &: nth-child(3) {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 8vh;
+  }
+`;
+
+const Img2 = styled.img`
+  &: nth-child(1) {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 24vh;
+    opacity: 0.7;
+  }  
+  &: nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 8vh;
+  }  
+`;
+
+const Img3 = styled.img`
+  &: nth-child(1) {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 32vh;
+    opacity: 0.7;
+  }  
+  &: nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 8vh;
+  }
+`;
+
+const Img4 = styled.img`
+  &: nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    opacity: 0.7;
+  }
+  &: nth-child(2) {
+    position: absolute;
+    top: 7%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    height: 5vh;
+  }
+  &: nth-child(3) {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    height: 8vh;
+  }
+`;
+
 function Home() {
     return (
       <Wrapper>
-        <Container />
-        <Container />
-        <Container />
-        <Container />
+        <Container>
+          <Img1 src = "../../Images/Air.png" />
+          <Img1 src = "../../Images/departure.png" />
+          <Img1 src = "../../Images/personalword.png" />
+        </Container>
+        <Container>
+          <Img2 src = "../../Images/ch.png" />
+          <Img2 src = "../../Images/walkabout.png" />
+        </Container>
+        <Container>
+          <Img3 src = "../../Images/ive.png" />
+          <Img3 src = "../../Images/readingrecord.png" />
+        </Container>
+        <Container>
+          <Img4 src = "../../Images/logo.png" />
+          <Img4 src = "../../Images/arrival.png" />
+          <Img4 src = "../../Images/afterflight.png" />
+        </Container>
       </Wrapper>
     );
 }
