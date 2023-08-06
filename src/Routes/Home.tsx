@@ -6,45 +6,42 @@ import { useNavigate, useMatch, PathMatch } from "react-router-dom";
 const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: pink;
   display: flex;
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   &: first-child {
     position: relative;
     background-image: url("../../Images/edit1.jpg");
     background-size: 100vw 100vh;
+    background-position: left;
     width: 30vw;
     height: 100vh;
-    background-color: white;
+
   }
   &: nth-child(2) {
     position: relative;
     background-image: url("../../Images/edit2.jpg");
     background-size: 100vw 100vh;
-    background-position: 35%;
+    background-position: -30vw;
     width: 20vw;
     height: 100vh;
-    background-color: green;
   }
   &: nth-child(3) {
     position: relative;
     background-image: url("../../Images/edit3.jpg");
     background-size: 100vw 100vh;
-    background-position: 65%;
+    background-position: -50vw;
     width: 20vw;
     height: 100vh;
-    background-color: yellow;
   }
   &: last-child {
     position: relative;
     background-image: url("../../Images/edit4.jpg");
     background-size: 100vw 100vh;
-    background-position: 100%;
+    background-position: right;
     width: 30vw;
     height: 100vh;
-    background-color: orange;
   }
 `;
 
@@ -54,7 +51,7 @@ const Img1 = styled.img`
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 40vh;
+    width: 50%;
     opacity: 0.7;
   }
   &: nth-child(2) {
@@ -69,7 +66,7 @@ const Img1 = styled.img`
     top: 10%;
     left: 80%;
     transform: translate(-50%, -50%);
-    height: 8vh;
+    height: 7vh;
   }
 `;
 
@@ -79,7 +76,7 @@ const Img2 = styled.img`
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 24vh;
+    width: 50%;
     opacity: 0.7;
   }  
   &: nth-child(2) {
@@ -87,7 +84,7 @@ const Img2 = styled.img`
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 8vh;
+    height: 7vh;
   }  
 `;
 
@@ -97,7 +94,7 @@ const Img3 = styled.img`
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 32vh;
+    width: 50%;
     opacity: 0.7;
   }  
   &: nth-child(2) {
@@ -105,7 +102,7 @@ const Img3 = styled.img`
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 8vh;
+    height: 7vh;
   }
 `;
 
@@ -115,7 +112,7 @@ const Img4 = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 30vh;
+    width: 50%;
     opacity: 0.7;
   }
   &: nth-child(2) {
@@ -130,31 +127,67 @@ const Img4 = styled.img`
     top: 10%;
     left: 20%;
     transform: translate(-50%, -50%);
-    height: 8vh;
+    height: 7vh;
   }
 `;
+
+const boxOne = {
+  normal: {
+    width: "30vw"
+  },
+  hover: {
+    width: "60vw"
+  }
+};
+
+const boxTwo = {
+  normal: {
+    width: "20vw"
+  },
+  hover: {
+    width: "40vw"
+  }
+};
 
 function Home() {
     return (
       <Wrapper>
-        <Container>
-          <Img1 src = "../../Images/Air.png" />
-          <Img1 src = "../../Images/departure.png" />
-          <Img1 src = "../../Images/personalword.png" />
-        </Container>
-        <Container>
-          <Img2 src = "../../Images/ch.png" />
-          <Img2 src = "../../Images/walkabout.png" />
-        </Container>
-        <Container>
-          <Img3 src = "../../Images/ive.png" />
-          <Img3 src = "../../Images/readingrecord.png" />
-        </Container>
-        <Container>
-          <Img4 src = "../../Images/logo.png" />
-          <Img4 src = "../../Images/arrival.png" />
-          <Img4 src = "../../Images/afterflight.png" />
-        </Container>
+        <AnimatePresence>
+          <Container
+            variants = {boxOne}
+            initial = "normal"
+            whileHover = "hover"
+          >
+            <Img1 src = "../../Images/Air.png" />
+            <Img1 src = "../../Images/departure.png" />
+            <Img1 src = "../../Images/personalword.png" />
+          </Container>
+          <Container
+            variants = {boxTwo}
+            initial = "normal"
+            whileHover = "hover"
+          >
+            <Img2 src = "../../Images/ch.png" />
+            <Img2 src = "../../Images/walkabout.png" />
+          </Container>
+          <Container
+            variants = {boxTwo}
+            initial = "normal"
+            whileHover = "hover"
+          >
+            <Img3 src = "../../Images/ive.png" />
+            <Img3 src = "../../Images/readingrecord.png" />
+          </Container>
+          <Container
+            variants = {boxOne}
+            initial = "normal"
+            whileHover = "hover"
+          >
+            <Img4 src = "../../Images/logo.png" />
+            <Img4 src = "../../Images/arrival.png" />
+            <Img4 src = "../../Images/afterflight.png" />
+          </Container>
+        </AnimatePresence>
       </Wrapper>
     );
 }
