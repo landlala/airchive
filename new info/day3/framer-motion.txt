@@ -1,0 +1,17 @@
+hover를 사용할 시에는 initial 조건을 같이 명시해 주어야 함
+안 그러면 blank 생김
+
+const boxOne = {
+  normal: {
+    width: "30vw"
+  },
+  hover: {
+    width: "60vw"
+  }
+};
+
+<Container
+  variants = {boxOne}
+  initial = "normal"
+  whileHover = "hover"
+>

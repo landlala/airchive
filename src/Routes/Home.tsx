@@ -17,13 +17,12 @@ const Container = styled(motion.div)`
     background-position: left;
     width: 30vw;
     height: 100vh;
-
   }
   &: nth-child(2) {
     position: relative;
     background-image: url("../../Images/edit2.jpg");
     background-size: 100vw 100vh;
-    background-position: -30vw;
+    background-position-x: calc(50% + 10vw);
     width: 20vw;
     height: 100vh;
   }
@@ -31,7 +30,7 @@ const Container = styled(motion.div)`
     position: relative;
     background-image: url("../../Images/edit3.jpg");
     background-size: 100vw 100vh;
-    background-position: -50vw;
+    background-position: calc(50% - 10vw);
     width: 20vw;
     height: 100vh;
   }
@@ -45,14 +44,14 @@ const Container = styled(motion.div)`
   }
 `;
 
-const Img1 = styled.img`
+const Img1 = styled(motion.img)`
   &: nth-child(1) {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    opacity: 0.7;
+    opacity: 0.6;
   }
   &: nth-child(2) {
     position: absolute;
@@ -67,53 +66,56 @@ const Img1 = styled.img`
     left: 80%;
     transform: translate(-50%, -50%);
     height: 7vh;
+    opacity: 0.5;
   }
 `;
 
-const Img2 = styled.img`
-  &: nth-child(1) {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    opacity: 0.7;
-  }  
-  &: nth-child(2) {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-  }  
-`;
-
-const Img3 = styled.img`
-  &: nth-child(1) {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    opacity: 0.7;
-  }  
-  &: nth-child(2) {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-  }
-`;
-
-const Img4 = styled.img`
+const Img2 = styled(motion.img)`
   &: nth-child(1) {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
-    opacity: 0.7;
+    opacity: 0.6;
+  }  
+  &: nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7vh;
+    opacity: 0.5;
+  }  
+`;
+
+const Img3 = styled(motion.img)`
+  &: nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    opacity: 0.6;
+  }  
+  &: nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 7vh;
+    opacity: 0.5;
+  }
+`;
+
+const Img4 = styled(motion.img)`
+  &: nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    opacity: 0.6;
   }
   &: nth-child(2) {
     position: absolute;
@@ -128,6 +130,7 @@ const Img4 = styled.img`
     left: 20%;
     transform: translate(-50%, -50%);
     height: 7vh;
+    opacity: 0.5;
   }
 `;
 
@@ -149,6 +152,15 @@ const boxTwo = {
   }
 };
 
+const textVar = {
+  normal: {
+    opacity: 0.5
+  },
+  hover: {
+    opacity: 1
+  }
+};
+
 function Home() {
     return (
       <Wrapper>
@@ -160,7 +172,10 @@ function Home() {
           >
             <Img1 src = "../../Images/Air.png" />
             <Img1 src = "../../Images/departure.png" />
-            <Img1 src = "../../Images/personalword.png" />
+            <Img1
+              variants = {textVar} 
+              src = "../../Images/personalword.png" 
+            />
           </Container>
           <Container
             variants = {boxTwo}
@@ -168,7 +183,10 @@ function Home() {
             whileHover = "hover"
           >
             <Img2 src = "../../Images/ch.png" />
-            <Img2 src = "../../Images/walkabout.png" />
+            <Img2
+              variants = {textVar}
+              src = "../../Images/walkabout.png" 
+            />
           </Container>
           <Container
             variants = {boxTwo}
@@ -176,7 +194,10 @@ function Home() {
             whileHover = "hover"
           >
             <Img3 src = "../../Images/ive.png" />
-            <Img3 src = "../../Images/readingrecord.png" />
+            <Img3 
+              variants = {textVar}
+              src = "../../Images/readingrecord.png" 
+            />
           </Container>
           <Container
             variants = {boxOne}
@@ -185,7 +206,10 @@ function Home() {
           >
             <Img4 src = "../../Images/logo.png" />
             <Img4 src = "../../Images/arrival.png" />
-            <Img4 src = "../../Images/afterflight.png" />
+            <Img4
+              variants = {textVar}
+              src = "../../Images/afterflight.png" 
+            />
           </Container>
         </AnimatePresence>
       </Wrapper>

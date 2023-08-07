@@ -1,0 +1,4 @@
+배경 키울 때 가운데를 중심으로 키우고 싶은 경우
+calc 사용
+
+background-position-x: calc(50% + 10vw);

@@ -1,0 +1,17 @@
+부모 hover 시에 자식에게 효과 주는 법
+
+부모에서 whileHover = "hover" 이후
+자식에게 variants 배정
+
+<Container
+  variants = {boxOne}
+  initial = "normal"
+  whileHover = "hover"
+>
+  <Img1 src = "../../Images/Air.png" />
+  <Img1 src = "../../Images/departure.png" />
+  <Img1
+    variants = {textVar} 
+    src = "../../Images/personalword.png" 
+  />
+</Container>
