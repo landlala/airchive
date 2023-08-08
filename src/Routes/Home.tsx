@@ -23,6 +23,7 @@ const Container = styled(motion.div)`
     background-image: url("../../Images/edit2.jpg");
     background-size: 100vw 100vh;
     background-position-x: calc(50% + 10vw);
+    background-attachment: fixed;
     width: 20vw;
     height: 100vh;
   }
@@ -31,6 +32,7 @@ const Container = styled(motion.div)`
     background-image: url("../../Images/edit3.jpg");
     background-size: 100vw 100vh;
     background-position: calc(50% - 10vw);
+    background-attachment: fixed;
     width: 20vw;
     height: 100vh;
   }
@@ -50,7 +52,7 @@ const Img1 = styled(motion.img)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    height: 25%;
     opacity: 0.6;
   }
   &: nth-child(2) {
@@ -76,7 +78,7 @@ const Img2 = styled(motion.img)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    height: 25%;
     opacity: 0.6;
   }  
   &: nth-child(2) {
@@ -95,7 +97,7 @@ const Img3 = styled(motion.img)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    height: 25%;
     opacity: 0.6;
   }  
   &: nth-child(2) {
@@ -114,7 +116,7 @@ const Img4 = styled(motion.img)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 35%;
     opacity: 0.6;
   }
   &: nth-child(2) {
@@ -152,7 +154,7 @@ const boxTwo = {
   }
 };
 
-const textVar = {
+const textOne = {
   normal: {
     opacity: 0.5
   },
@@ -160,6 +162,15 @@ const textVar = {
     opacity: 1
   }
 };
+
+const textTwo = {
+  normal: {
+    opacity: 0.6
+  },
+  hover: {
+    opacity: 0.2
+  }
+}
 
 function Home() {
     return (
@@ -170,10 +181,13 @@ function Home() {
             initial = "normal"
             whileHover = "hover"
           >
-            <Img1 src = "../../Images/Air.png" />
+            <Img1
+              variants = {textTwo}
+              src = "../../Images/Air.png" 
+            />
             <Img1 src = "../../Images/departure.png" />
             <Img1
-              variants = {textVar} 
+              variants = {textOne} 
               src = "../../Images/personalword.png" 
             />
           </Container>
@@ -182,9 +196,12 @@ function Home() {
             initial = "normal"
             whileHover = "hover"
           >
-            <Img2 src = "../../Images/ch.png" />
             <Img2
-              variants = {textVar}
+              variants = {textTwo} 
+              src = "../../Images/ch.png" 
+            />
+            <Img2
+              variants = {textOne}
               src = "../../Images/walkabout.png" 
             />
           </Container>
@@ -193,9 +210,12 @@ function Home() {
             initial = "normal"
             whileHover = "hover"
           >
-            <Img3 src = "../../Images/ive.png" />
             <Img3 
-              variants = {textVar}
+              variants = {textTwo} 
+              src = "../../Images/ive.png" 
+            />
+            <Img3 
+              variants = {textOne}
               src = "../../Images/readingrecord.png" 
             />
           </Container>
@@ -207,7 +227,7 @@ function Home() {
             <Img4 src = "../../Images/logo.png" />
             <Img4 src = "../../Images/arrival.png" />
             <Img4
-              variants = {textVar}
+              variants = {textOne}
               src = "../../Images/afterflight.png" 
             />
           </Container>
