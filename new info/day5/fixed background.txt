@@ -1,0 +1,3 @@
+틀에 맞춰 background 설정
+
+background-attachment: fixed;
