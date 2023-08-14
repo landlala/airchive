@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { motion, AnimatePresence} from "framer-motion";
-import { useNavigate, useMatch, PathMatch } from "react-router-dom";
+import { useNavigate, useMatch, PathMatch, Link } from "react-router-dom";
+import transition from "../transition";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -22,7 +23,7 @@ const Container = styled(motion.div)`
     position: relative;
     background-image: url("../../Images/edit2.jpg");
     background-size: 100vw 100vh;
-    background-position-x: calc(50% + 10vw);
+    background-position-x: 60%;
     background-attachment: fixed;
     width: 20vw;
     height: 100vh;
@@ -31,7 +32,7 @@ const Container = styled(motion.div)`
     position: relative;
     background-image: url("../../Images/edit3.jpg");
     background-size: 100vw 100vh;
-    background-position: calc(50% - 10vw);
+    background-position: 40%;
     background-attachment: fixed;
     width: 20vw;
     height: 100vh;
@@ -62,14 +63,15 @@ const Img1 = styled(motion.img)`
     transform: translate(-50%, -50%);
     height: 5vh;
   }
-  &: nth-child(3) {
-    position: absolute;
-    top: 10%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-    opacity: 0.5;
-  }
+`;
+
+const Nav1 = styled(motion.img)`
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  height: 7vh;
+  opacity: 0.5;
 `;
 
 const Img2 = styled(motion.img)`
@@ -81,14 +83,15 @@ const Img2 = styled(motion.img)`
     height: 25%;
     opacity: 0.6;
   }  
-  &: nth-child(2) {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-    opacity: 0.5;
-  }  
+`;
+
+const Nav2 = styled(motion.img)`
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 7vh;
+  opacity: 0.5;
 `;
 
 const Img3 = styled(motion.img)`
@@ -100,14 +103,6 @@ const Img3 = styled(motion.img)`
     height: 25%;
     opacity: 0.6;
   }  
-  &: nth-child(2) {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-    opacity: 0.5;
-  }
 `;
 
 const Img4 = styled(motion.img)`
@@ -126,14 +121,15 @@ const Img4 = styled(motion.img)`
     transform: translate(-50%, -50%);
     height: 5vh;
   }
-  &: nth-child(3) {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    height: 7vh;
-    opacity: 0.5;
-  }
+`;
+
+const Nav3 = styled(motion.img)`
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  height: 7vh;
+  opacity: 0.5;
 `;
 
 const Svg = styled(motion.svg)`
@@ -164,18 +160,12 @@ const boxTwo = {
 };
 
 const textOne = {
-  normal: {
-    opacity: 0.5
-  },
   hover: {
     opacity: 1
   }
 };
 
 const textTwo = {
-  normal: {
-    opacity: 0.6,
-  },
   hover: {
     opacity: 0.2,
   }
@@ -213,11 +203,12 @@ function Home() {
               src = "../../Images/Air.png" 
             />
             <Img1 src = "../../Images/departure.png" />
-            <Img1
-              variants = {textOne}
-              src = "../../Images/personalword.png" 
-            />
-            
+            <Link to = "personalword">
+              <Nav1
+                variants = {textOne}
+                src = "../../Images/personalword.png" 
+              />
+            </Link>
           </Container>
           <Container
             variants = {boxTwo}
@@ -231,10 +222,12 @@ function Home() {
               transition = {{y: {type: "spring", duration: 1, delay: 1.6}}}
               src = "../../Images/ch.png" 
             />
-            <Img2
-              variants = {textOne}
-              src = "../../Images/walkabout.png" 
-            />
+            <Link to = "walkabout">
+              <Nav2
+                variants = {textOne}
+                src = "../../Images/walkabout.png" 
+              />
+            </Link>
           </Container>
           <Container
             variants = {boxTwo}
@@ -248,10 +241,12 @@ function Home() {
               transition = {{y: {type: "spring", duration: 1, delay: 2.2}}}
               src = "../../Images/ive.png" 
             />
-            <Img3 
-              variants = {textOne}
-              src = "../../Images/readingrecord.png" 
-            />
+            <Link to = "readingrecord">
+              <Nav2 
+                variants = {textOne}
+                src = "../../Images/readingrecord.png" 
+              />
+            </Link>
           </Container>
           <Container
             variants = {boxOne}
@@ -297,14 +292,16 @@ function Home() {
               </g>
             </Svg>
             <Img4 src = "../../Images/arrival.png" />
-            <Img4
-              variants = {textOne}
-              src = "../../Images/afterflight.png" 
-            />
+            <Link to = "afterflight">
+              <Nav3
+                variants = {textOne}
+                src = "../../Images/afterflight.png" 
+              />
+            </Link>
           </Container>
         </AnimatePresence>
       </Wrapper>
     );
 }
 
-export default Home;
+export default transition(Home);
