@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Container = styled(motion.div)`
   &: first-child {
     position: relative;
-    background-image: url("../../Images/edit1.jpg");
+    background-image: url("../../Images/edit11.jpg");
     background-size: 100vw 100vh;
     background-position: left;
     width: 30vw;
@@ -21,7 +21,7 @@ const Container = styled(motion.div)`
   }
   &: nth-child(2) {
     position: relative;
-    background-image: url("../../Images/edit2.jpg");
+    background-image: url("../../Images/edit15.jpg");
     background-size: 100vw 100vh;
     background-position-x: 60%;
     background-attachment: fixed;
@@ -30,7 +30,7 @@ const Container = styled(motion.div)`
   }
   &: nth-child(3) {
     position: relative;
-    background-image: url("../../Images/edit3.jpg");
+    background-image: url("../../Images/edit10.jpg");
     background-size: 100vw 100vh;
     background-position: 40%;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ const Container = styled(motion.div)`
   }
   &: last-child {
     position: relative;
-    background-image: url("../../Images/edit4.jpg");
+    background-image: url("../../Images/edit7.jpg");
     background-size: 100vw 100vh;
     background-position: right;
     width: 30vw;

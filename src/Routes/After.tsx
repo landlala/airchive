@@ -2,10 +2,9 @@ import styled from "styled-components";
 import transition from "../transition";
 
 const Wrapper = styled.div`
-    width: 100vw;
     height: 100vh;
     display: flex;
-    background-image : url("../../Images/edit4.jpg");
+    background-image : url("../../Images/bg1.png");
     background-size: 100vw 100vh;
 `;
 

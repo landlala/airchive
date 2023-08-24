@@ -5,7 +5,7 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image : url("../../Images/edit2.jpg");
+    background-image : url("../../Images/edit15.jpg");
     background-size: 100vw 100vh;
 `;
 
