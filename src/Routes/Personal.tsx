@@ -18,7 +18,7 @@ const Logo = styled.img`
     right: 0;
     left: 0;
     margin: auto;
-    height: 7%;
+    height: 7vh;
 `;
 
 const Bg = styled.img`
