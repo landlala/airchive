@@ -11,14 +11,6 @@ const Nav = styled.div`
     background-color: white;
 `;
 
-const Wrapper = styled.div`
-    position: relative;
-    margin-top: 10vh;
-    width: 100vw;
-    height: 185vh;
-    overflow: hidden;
-`;
-
 const Logo = styled.img`
     position: absolute;
     top: 1vh;
@@ -29,25 +21,124 @@ const Logo = styled.img`
     z-index: 10;
 `;
 
-const Bg = styled.img`
+const Bg = styled.div`
+    position: relative;
+    background-image: url("../../Images/edit18.jpg");
+    background-size: cover;
+    height: 185vh;
+`;
+
+const Poem = styled.img`
     position: absolute;
-    top: -10vh;
-    width: 100vw;
-    overflow-y: hidden;
-    z-index: -1;
+    opacity: 0.8
 `;
 
 function Walk() {
     return (
         <>
-            <Nav>
-                <Link to = "/">
-                    <Logo src = "../../Images/logo/2.png" />
-                </Link>
-            </Nav>
-            <Wrapper>
-                <Bg src = "../../Images/edit18.jpg" />
-            </Wrapper>
+            <Bg> 
+                <Nav>
+                    <Link to = "/">
+                        <Logo src = "../../Images/logo/2.png" />
+                    </Link>
+                </Nav>
+                <Poem
+                    src = "../../Images/poems/0.png"
+                    style = {{
+                        width: "17%",
+                        top: "25vh",
+                        left: "5vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/1.png"
+                    style = {{
+                        width: "12%",
+                        top: "95vh",
+                        left: "11vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/2.png"
+                    style = {{
+                        width: "15%",
+                        top: "132vh",
+                        left: "3vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/3.png"
+                    style = {{
+                        width: "10%",
+                        top: "50vh",
+                        left: "28vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/4.png"
+                    style = {{
+                        width: "11%",
+                        top: "116vh",
+                        left: "34vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/5.png"
+                    style = {{
+                        width: "12%",
+                        top: "32vh",
+                        left: "48vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/6.png"
+                    style = {{
+                        width: "12%",
+                        top: "90vh",
+                        left: "52vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/7.png"
+                    style = {{
+                        width: "8%",
+                        top: "145vh",
+                        left: "57vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/8.png"
+                    style = {{
+                        width: "14%",
+                        top: "20vh",
+                        left: "67vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/9.png"
+                    style = {{
+                        width: "12%",
+                        top: "100vh",
+                        left: "69vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/10.png"
+                    style = {{
+                        width: "13%",
+                        top: "50vh",
+                        left: "84vw"
+                    }} 
+                />
+                <Poem
+                    src = "../../Images/poems/11.png"
+                    style = {{
+                        width: "14%",
+                        top: "133vh",
+                        left: "83vw"
+                    }} 
+                />
+            </Bg>
         </>
         
     );

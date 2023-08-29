@@ -22,7 +22,7 @@ const Container = styled(motion.div)`
   &: nth-child(2) {
     position: relative;
     background-image: url("../../Images/edit19.jpg");
-    background-size: 100vw;
+    background-size: cover;
     background-position-x: 60%;
     background-attachment: fixed;
     width: 20vw;
@@ -31,7 +31,7 @@ const Container = styled(motion.div)`
   &: nth-child(3) {
     position: relative;
     background-image: url("../../Images/edit10.jpg");
-    background-size: 100vw 100vh;
+    background-size: cover;
     background-position: 40%;
     background-attachment: fixed;
     width: 20vw;
