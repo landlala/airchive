@@ -9,11 +9,12 @@ const Nav = styled.div`
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 5;
 `;
 
 const Logo = styled.img`
-    position: absolute;
-    top: 1vh;
+    position: fixed;
+    top: 3vh;
     right: 0;
     left: 0;
     margin: auto;
@@ -30,18 +31,16 @@ const Bg = styled.div`
 
 const Poem = styled.img`
     position: absolute;
-    opacity: 0.8
+    opacity: 0.8;
 `;
 
 function Walk() {
     return (
         <>
             <Bg> 
-                <Nav>
-                    <Link to = "/">
-                        <Logo src = "../../Images/logo/2.png" />
-                    </Link>
-                </Nav>
+                <Link to = "/">
+                    <Logo src = "../../Images/logo/0.png" />
+                </Link>
                 <Poem
                     src = "../../Images/poems/0.png"
                     style = {{
