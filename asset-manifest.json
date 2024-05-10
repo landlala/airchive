@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/airchive/static/js/main.20d9fa48.js",
+    "index.html": "/airchive/index.html",
+    "main.20d9fa48.js.map": "/airchive/static/js/main.20d9fa48.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.20d9fa48.js"
+  ]
+}
