@@ -8,7 +8,7 @@ import After from "./Routes/After";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AnimatePresence mode = "wait">
         <Routes>
           <Route path = "/" element = {<Home />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path = "afterflight" element = {<After />} />
         </Routes>
       </AnimatePresence>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

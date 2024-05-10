@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
     height: 100vh;
-    background-image : url("../../Images/edit7.jpg");
+    background-image : url("/airchive/Images/edit7.jpg");
     background-size: 100vw 100vh;
     display: flex;
     flex-direction: column;
@@ -61,49 +61,49 @@ function After() {
     return (
         <Wrapper>
             <Link to = "/">
-                <Logo src = "../../Images/logo/0.png" />
+                <Logo src = "/airchive/Images/logo/0.png" />
             </Link>
         <BigLogo 
             initial = {{opacity: 0}}
             animate = {{opacity: 0.2}}
             transition={{delay: 7, duration: 1}}
-            src = "../../Images/logo/0.png" 
+            src = "/airchive/Images/logo/0.png" 
         />
             <AfterOne
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 1, duration: 1}}
-                src = "../../Images/after/0.png" 
+                src = "/airchive/Images/after/0.png" 
             />
             <AfterOne
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 2.2, duration: 1}}
-                src = "../../Images/after/1.png" 
+                src = "/airchive/Images/after/1.png" 
             />
             <AfterOne
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 3.4, duration: 1}}
-                src = "../../Images/after/2.png" 
+                src = "/airchive/Images/after/2.png" 
             />
             <AfterOne
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 4.6, duration: 1}}
-                src = "../../Images/after/3.png" 
+                src = "/airchive/Images/after/3.png" 
             />
             <AfterOne
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 5.8, duration: 1}}
-                src = "../../Images/after/4.png" 
+                src = "/airchive/Images/after/4.png" 
             />
             <AfterTwo
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 7, duration: 1}}
-                src = "../../Images/after/5.png" 
+                src = "/airchive/Images/after/5.png" 
             /> 
             <AfterTwo
                 style = {{
@@ -112,7 +112,7 @@ function After() {
                 initial = {{opacity: 0}}
                 animate = {{opacity: 1}}
                 transition={{delay: 7, duration: 1}}
-                src = "../../Images/after/6.png" 
+                src = "/airchive/Images/after/6.png" 
             />
         </Wrapper>
     );

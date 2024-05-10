@@ -24,7 +24,7 @@ const Logo = styled.img`
 
 const Bg = styled.div`
     position: relative;
-    background-image: url("../../Images/edit18.jpg");
+    background-image: url("/airchive/Images/edit18.jpg");
     background-size: cover;
     height: 185vh;
 `;
@@ -39,10 +39,10 @@ function Walk() {
         <>
             <Bg> 
                 <Link to = "/">
-                    <Logo src = "../../Images/logo/0.png" />
+                    <Logo src = "/airchive/Images/logo/0.png" />
                 </Link>
                 <Poem
-                    src = "../../Images/poems/0.png"
+                    src = "/airchive/Images/poems/0.png"
                     style = {{
                         width: "17%",
                         top: "25vh",
@@ -50,7 +50,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/1.png"
+                    src = "/airchive/Images/poems/1.png"
                     style = {{
                         width: "12%",
                         top: "95vh",
@@ -58,7 +58,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/2.png"
+                    src = "/airchive/Images/poems/2.png"
                     style = {{
                         width: "15%",
                         top: "132vh",
@@ -66,7 +66,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/3.png"
+                    src = "/airchive/Images/poems/3.png"
                     style = {{
                         width: "10%",
                         top: "50vh",
@@ -74,7 +74,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/4.png"
+                    src = "/airchive/Images/poems/4.png"
                     style = {{
                         width: "11%",
                         top: "116vh",
@@ -82,7 +82,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/5.png"
+                    src = "/airchive/Images/poems/5.png"
                     style = {{
                         width: "12%",
                         top: "32vh",
@@ -90,7 +90,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/6.png"
+                    src = "/airchive/Images/poems/6.png"
                     style = {{
                         width: "12%",
                         top: "90vh",
@@ -98,7 +98,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/7.png"
+                    src = "/airchive/Images/poems/7.png"
                     style = {{
                         width: "8%",
                         top: "145vh",
@@ -106,7 +106,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/8.png"
+                    src = "/airchive/Images/poems/8.png"
                     style = {{
                         width: "14%",
                         top: "20vh",
@@ -114,7 +114,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/9.png"
+                    src = "/airchive/Images/poems/9.png"
                     style = {{
                         width: "12%",
                         top: "100vh",
@@ -122,7 +122,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/10.png"
+                    src = "/airchive/Images/poems/10.png"
                     style = {{
                         width: "13%",
                         top: "50vh",
@@ -130,7 +130,7 @@ function Walk() {
                     }} 
                 />
                 <Poem
-                    src = "../../Images/poems/11.png"
+                    src = "/airchive/Images/poems/11.png"
                     style = {{
                         width: "14%",
                         top: "133vh",

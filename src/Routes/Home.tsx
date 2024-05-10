@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Container = styled(motion.div)`
   &: first-child {
     position: relative;
-    background-image: url("../../Images/edit11.jpg");
+    background-image: url("/airchive/Images/edit11.jpg");
     background-size: 100vw 100vh;
     background-position: left;
     width: 30vw;
@@ -21,7 +21,7 @@ const Container = styled(motion.div)`
   }
   &: nth-child(2) {
     position: relative;
-    background-image: url("../../Images/edit19.jpg");
+    background-image: url("/airchive/Images/edit19.jpg");
     background-size: cover;
     background-position-x: 60%;
     background-attachment: fixed;
@@ -30,7 +30,7 @@ const Container = styled(motion.div)`
   }
   &: nth-child(3) {
     position: relative;
-    background-image: url("../../Images/edit10.jpg");
+    background-image: url("/airchive/Images/edit10.jpg");
     background-size: cover;
     background-position: 40%;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ const Container = styled(motion.div)`
   }
   &: last-child {
     position: relative;
-    background-image: url("../../Images/edit7.jpg");
+    background-image: url("/airchive/Images/edit7.jpg");
     background-size: 100vw 100vh;
     background-position: right;
     width: 30vw;
@@ -200,13 +200,13 @@ function Home() {
               initial = {{x: "-50%", y: "calc(-50% + 50px)", opacity: 0}}
               animate = {{y: "-50%", opacity: 0.6}}
               transition = {{y: {type: "spring", duration: 1, delay: 1}}}
-              src = "../../Images/Air.png" 
+              src = {process.env.PUBLIC_URL + "/Images/Air.png" }
             />
-            <Img1 src = "../../Images/departure.png" />
+            <Img1 src = {process.env.PUBLIC_URL + "/Images/departure.png"} />
             <Link to = "personalword">
               <Nav1
                 variants = {textOne}
-                src = "../../Images/personalword.png" 
+                src = {process.env.PUBLIC_URL + "/Images/personalword.png"} 
               />
             </Link>
           </Container>
@@ -220,12 +220,12 @@ function Home() {
               initial = {{x: "-50%", y: "calc(-50% + 50px)", opacity: 0}}
               animate = {{y: "-50%", opacity: 0.6}}
               transition = {{y: {type: "spring", duration: 1, delay: 1.6}}}
-              src = "../../Images/ch.png" 
+              src = {process.env.PUBLIC_URL + "/Images/ch.png"} 
             />
             <Link to = "walkabout">
               <Nav2
                 variants = {textOne}
-                src = "../../Images/walkabout.png" 
+                src = {process.env.PUBLIC_URL + "/Images/walkabout.png"} 
               />
             </Link>
           </Container>
@@ -239,12 +239,12 @@ function Home() {
               initial = {{x: "-50%", y: "calc(-50% + 50px)", opacity: 0}}
               animate = {{y: "-50%", opacity: 0.6}}
               transition = {{y: {type: "spring", duration: 1, delay: 2.2}}}
-              src = "../../Images/ive.png" 
+              src = {process.env.PUBLIC_URL + "/Images/ive.png"}
             />
             <Link to = "readingrecord">
               <Nav2 
                 variants = {textOne}
-                src = "../../Images/readingrecord.png" 
+                src = {process.env.PUBLIC_URL + "/Images/readingrecord.png"} 
               />
             </Link>
           </Container>
@@ -291,11 +291,11 @@ function Home() {
                 /> 
               </g>
             </Svg>
-            <Img4 src = "../../Images/arrival.png" />
+            <Img4 src = {process.env.PUBLIC_URL + "/Images/arrival.png"} />
             <Link to = "afterflight">
               <Nav3
                 variants = {textOne}
-                src = "../../Images/afterflight.png" 
+                src = {process.env.PUBLIC_URL + "/Images/afterflight.png"} 
               />
             </Link>
           </Container>

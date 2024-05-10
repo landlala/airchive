@@ -68,15 +68,15 @@ function Personal() {
     return (
         <>
             <Link to = "/">
-                <Logo src = "../../Images/logo/0.png" />
+                <Logo src = "/airchive/Images/logo/0.png" />
             </Link>
             <Wrapper ref = {biggerBoxRef}>
-                <Bg src = "../../Images/edit11.jpg" />
+                <Bg src = "/airchive/Images/edit11.jpg" />
                 <Word 
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/0.png"
+                    src = "/airchive/Images/words/0.png"
                     onClick = {() => wordHandler(0)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -87,7 +87,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/1.png"
+                    src = "/airchive/Images/words/1.png"
                     onClick = {() => wordHandler(1)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -98,7 +98,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/2.png"
+                    src = "/airchive/Images/words/2.png"
                     onClick = {() => wordHandler(2)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -109,7 +109,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/3.png"
+                    src = "/airchive/Images/words/3.png"
                     onClick = {() => wordHandler(3)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -120,7 +120,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/4.png"
+                    src = "/airchive/Images/words/4.png"
                     onClick = {() => wordHandler(4)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -131,7 +131,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/5.png"
+                    src = "/airchive/Images/words/5.png"
                     onClick = {() => wordHandler(5)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -142,7 +142,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/6.png"
+                    src = "/airchive/Images/words/6.png"
                     onClick = {() => wordHandler(6)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -153,7 +153,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/7.png"
+                    src = "/airchive/Images/words/7.png"
                     onClick = {() => wordHandler(7)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -164,7 +164,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/8.png"
+                    src = "/airchive/Images/words/8.png"
                     onClick = {() => wordHandler(8)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -175,7 +175,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/9.png"
+                    src = "/airchive/Images/words/9.png"
                     onClick = {() => wordHandler(9)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -186,7 +186,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/10.png"
+                    src = "/airchive/Images/words/10.png"
                     onClick = {() => wordHandler(10)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -197,7 +197,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/11.png"
+                    src = "/airchive/Images/words/11.png"
                     onClick = {() => wordHandler(11)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -208,7 +208,7 @@ function Personal() {
                     variants = {wordVariants}
                     initial = "original"
                     animate = "next"
-                    src = "../../Images/words/12.png"
+                    src = "/airchive/Images/words/12.png"
                     onClick = {() => wordHandler(12)}
                     drag
                     dragConstraints = {biggerBoxRef}
@@ -217,7 +217,7 @@ function Personal() {
                 />
             </Wrapper>
             {clickedWord !== -1 ? 
-                <Specific src = {`../../Images/words/specific/${clickedWord}.png`} />
+                <Specific src = {`/airchive/Images/words/specific/${clickedWord}.png`} />
                 : null
             }
         </>
